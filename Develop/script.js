@@ -1,5 +1,6 @@
 // Assignment Code
 let generateBtn = document.querySelector("#generate");
+let cardBody = document.querySelector('.card-body');
 
 // Write password to the #password input
 function writePassword() {
@@ -10,12 +11,14 @@ function writePassword() {
 
 //generatePassword - will check upper/lower/special char. 
 function generatePassword() {
-
+  cardBody.innerHTML =  
+  Math.random().toString().slice(2) +  
+  Math.random().toString(36) 
+      .toUpperCase().slice(2); 
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
-
 
 
 
@@ -31,6 +34,5 @@ generateBtn.addEventListener('click', writePassword);
  - cycle through the criteria 
  -return password from the generatePassword function
  -add the password to the screen 
-
 
 */
