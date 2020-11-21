@@ -11,11 +11,18 @@ function writePassword() {
 
 //generatePassword - will check upper/lower/special char. 
 function generatePassword() {
-  let automatePass = '';
-  let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  let lower = upper.toLowerCase();
-  let nums = '0123456789';
-  let specialChar = '!@#$%^&*()-_+=';
+  // let automatePass = '';
+  // let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  // let lower = upper.toLowerCase();
+  // let nums = '0123456789';
+  // let specialChar = '!@#$%^&*()-_+=';
+  let set = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=';
+
+  let prompts = Number(prompt("Type required password character length (8 - 128 chracters).", "0"));
+
+  cardBody.innerHTML = function(x) {
+
+  }
 }
 
 // Add event listener to generate button
