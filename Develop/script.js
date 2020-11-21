@@ -11,10 +11,11 @@ function writePassword() {
 
 //generatePassword - will check upper/lower/special char. 
 function generatePassword() {
-  cardBody.innerHTML =  
-  Math.random().toString().slice(2) +  
-  Math.random().toString(36) 
-      .toUpperCase().slice(2); 
+  let automatePass = '';
+  let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let lower = upper.toLowerCase();
+  let nums = '0123456789';
+  let specialChar = '!@#$%^&*()-_+=';
 }
 
 // Add event listener to generate button
@@ -35,4 +36,10 @@ generateBtn.addEventListener('click', writePassword);
  -return password from the generatePassword function
  -add the password to the screen 
 
+
+
+   cardBody.innerHTML =  
+  Math.random().toString().slice(2) +  
+  Math.random().toString(36) 
+      .toUpperCase().slice(2); 
 */
