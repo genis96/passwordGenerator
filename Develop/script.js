@@ -1,6 +1,5 @@
 // Assignment Code
 let generateBtn = document.querySelector("#generate");
-let cardBody = document.querySelector('.card-body');
 
 // Write password to the #password input
 function writePassword() {
@@ -12,10 +11,6 @@ function writePassword() {
 //generatePassword - will check upper/lower/special char. 
 function generatePassword() {
   let pass = '';
-  // let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  // let lower = upper.toLowerCase();
-  // let nums = '0123456789';
-  // let specialChar = '!@#$%^&*()-_+=';
   let charSet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=';
   let prompts = Number(prompt('Required: 8-128', '0'));
 
@@ -53,14 +48,4 @@ generateBtn.addEventListener('click', writePassword);
  -add the password to the screen 
 
 
-
-   cardBody.innerHTML =  
-  Math.random().toString().slice(2) +  
-  Math.random().toString(36) 
-      .toUpperCase().slice(2); 
-
-
-
-  // let charSet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=';
-  
 */
