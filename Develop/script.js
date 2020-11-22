@@ -20,10 +20,11 @@ function generatePassword() {
   let prompts = Number(prompt('Required: 8-128', '0'));
 
   if(prompts >= 8 && prompts <= 128) {
-    let upperCases = confirm("Does your password require uppercase characters?");
-    let lowerCases = confirm("Does your password require lowercase characters?");
-    let numsNums = confirm("Does your password require numbers?");
-    let specialChars = confirm("Does your password require special characters?");
+    let promptPopups = 
+      confirm('Does your password require uppercase characters?');
+      confirm('Does your password require lowercase characters?');
+      confirm('Does your password require numbers?');
+      confirm('Does your password require special characters?');
     
     for(let i = 0; i < prompts; i++) {
       if(charSet) {
