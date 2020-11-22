@@ -27,11 +27,11 @@ function generatePassword() {
     for(let i = 0; i < prompts; i++) {
       if(upper) {
         pass += upper[Math.floor(Math.random() * upper.length)];
-      } else if(lower) {
+      } if(lower) {
         pass += lower[Math.floor(Math.random() * lower.length)];
-      } else if(nums) {
+      } if(nums) {
         pass += nums[Math.floor(Math.random() * nums.length)];
-      } else if(specialChar) {
+      } if(specialChar) {
         pass += specialChar[Math.floor(Math.random() * specialChar.length)];
       }
     } 
