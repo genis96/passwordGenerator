@@ -29,7 +29,7 @@ generatePassword = () => {
     } 
     return pass;
   }
-  alert('Input must be between 8 and 128.');
+  alert(`Input must be between 8 and 128.`);
 }
 
 // Add event listener to generate button
