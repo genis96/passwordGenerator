@@ -19,20 +19,20 @@ function generatePassword() {
   let prompts = Number(prompt('Required: (8 - 128 chracters).', '0'));
 
   if(prompts >= 8 && prompts <= 128) {
-    let upperCases = confirm("Does your password require uppercase characters?");
-    let lowerCases = confirm("Does your password require lowercase characters?");
-    let numsNums = confirm("Does your password require numbers?");
-    let specialChars = confirm("Does your password require special characters?");
+    // let upperCases = confirm("Does your password require uppercase characters?");
+    // let lowerCases = confirm("Does your password require lowercase characters?");
+    // let numsNums = confirm("Does your password require numbers?");
+    // let specialChars = confirm("Does your password require special characters?");
 
     for(let i = 0; i < prompts; i++) {
-      if(upperCases) {
-        pass += upperCases[Math.floor(Math.random() * upperCases.length)];
-      } else if(lowerCases) {
-        pass += lowerCases[Math.floor(Math.random() * lowerCases.length)];
-      } else if(numsNums) {
-        pass += numsNums[Math.floor(Math.random() * numsNums.length)];
-      } else if(specialChars) {
-        pass += specialChars[Math.floor(Math.random() * specialChars.length)];
+      if(upper) {
+        pass += upper[Math.floor(Math.random() * upper.length)];
+      } else if(lower) {
+        pass += lower[Math.floor(Math.random() * lower.length)];
+      } else if(nums) {
+        pass += nums[Math.floor(Math.random() * nums.length)];
+      } else if(specialChar) {
+        pass += specialChar[Math.floor(Math.random() * specialChar.length)];
       }
     } 
   }
