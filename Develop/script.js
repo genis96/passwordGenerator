@@ -9,7 +9,7 @@ function writePassword() {
 }
 
 //generatePassword - will check upper/lower/special char. 
-generatePassword => {
+generatePassword = () => {
   let pass = '';
   let charSet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=';
   //removing Number works as well
