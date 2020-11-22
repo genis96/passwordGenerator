@@ -8,7 +8,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
-//generatePassword - will check upper/lower/special char. 
+//generatePassword - will check upper/lower/special char 
 generatePassword = () => {
   let pass = '';
   let charSet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=';
