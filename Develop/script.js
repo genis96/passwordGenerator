@@ -11,7 +11,7 @@ function writePassword() {
 
 //generatePassword - will check upper/lower/special char. 
 function generatePassword() {
-  let automatePass = '';
+  let pass = '';
   let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let lower = upper.toLowerCase();
   let nums = '0123456789';
@@ -19,16 +19,24 @@ function generatePassword() {
   let prompts = Number(prompt('Required: (8 - 128 chracters).', '0'));
 
   if(prompts >= 8 && prompts <= 128) {
-    upper = confirm("Does your password require uppercase characters?");
-    lower = confirm("Does your password require lowercase characters?");
-    nums = confirm("Does your password require numbers?");
-    specialChar = confirm("Does your password require special characters?");
+    let upperCases = confirm("Does your password require uppercase characters?");
+    let lowerCases = confirm("Does your password require lowercase characters?");
+    let numsNums = confirm("Does your password require numbers?");
+    let specialChars = confirm("Does your password require special characters?");
 
     for(let i = 0; i < prompts; i++) {
-      
-    }
+      if(upperCases) {
+        pass += upperCases[Math.floor(Math.random() * upperCases.length)];
+      } else if(lowerCases) {
+        pass += lowerCases[Math.floor(Math.random() * lowerCases.length)];
+      } else if(numsNums) {
+        pass += numsNums[Math.floor(Math.random() * numsNums.length)];
+      } else if(specialChars) {
+        pass += specialChars[Math.floor(Math.random() * specialChars.length)];
+      }
+    } 
   }
-
+  return pass;
 }
 
 // Add event listener to generate button
