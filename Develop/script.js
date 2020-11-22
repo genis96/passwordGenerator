@@ -22,11 +22,16 @@ generatePassword = () => {
       confirm('Does your password require numbers?');
       confirm('Does your password require special characters?');
     
-    for(let i = 0; i < prompts; i++) {
+      prompts.forEach(i => {
       if(charSet) {
         pass += charSet[Math.floor(Math.random() * charSet.length)];
       } 
-    } 
+    })
+    // for(let i = 0; i < prompts; i++) {
+    //   if(charSet) {
+    //     pass += charSet[Math.floor(Math.random() * charSet.length)];
+    //   } 
+    // } 
     return pass;
   }
   alert('Input must be between 8 and 128.');
