@@ -11,18 +11,24 @@ function writePassword() {
 
 //generatePassword - will check upper/lower/special char. 
 function generatePassword() {
-  // let automatePass = '';
-  // let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  // let lower = upper.toLowerCase();
-  // let nums = '0123456789';
-  // let specialChar = '!@#$%^&*()-_+=';
-  let set = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=';
+  let automatePass = '';
+  let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let lower = upper.toLowerCase();
+  let nums = '0123456789';
+  let specialChar = '!@#$%^&*()-_+=';
+  let prompts = Number(prompt('Required: (8 - 128 chracters).', '0'));
 
-  let prompts = Number(prompt("Type required password character length (8 - 128 chracters).", "0"));
+  if(prompts >= 8 && prompts <= 128) {
+    upper = confirm("Does your password require uppercase characters?");
+    lower = confirm("Does your password require lowercase characters?");
+    nums = confirm("Does your password require numbers?");
+    specialChar = confirm("Does your password require special characters?");
 
-  cardBody.innerHTML = function(x) {
-
+    for(let i = 0; i < prompts; i++) {
+      
+    }
   }
+
 }
 
 // Add event listener to generate button
@@ -49,4 +55,9 @@ generateBtn.addEventListener('click', writePassword);
   Math.random().toString().slice(2) +  
   Math.random().toString(36) 
       .toUpperCase().slice(2); 
+
+
+
+  // let charSet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=';
+  
 */
