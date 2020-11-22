@@ -16,7 +16,7 @@ function generatePassword() {
   let lower = upper.toLowerCase();
   let nums = '0123456789';
   let specialChar = '!@#$%^&*()-_+=';
-  let prompts = Number(prompt('Required: (8 - 128 chracters).', '0'));
+  let prompts = Number(prompt('Required: 8-128', '0'));
 
   if(prompts >= 8 && prompts <= 128) {
     // let upperCases = confirm("Does your password require uppercase characters?");
