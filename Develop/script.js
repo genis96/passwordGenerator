@@ -12,10 +12,11 @@ function writePassword() {
 //generatePassword - will check upper/lower/special char. 
 function generatePassword() {
   let pass = '';
-  let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  let lower = upper.toLowerCase();
-  let nums = '0123456789';
-  let specialChar = '!@#$%^&*()-_+=';
+  // let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  // let lower = upper.toLowerCase();
+  // let nums = '0123456789';
+  // let specialChar = '!@#$%^&*()-_+=';
+  let charSet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=';
   let prompts = Number(prompt('Required: 8-128', '0'));
 
   if(prompts >= 8 && prompts <= 128) {
@@ -23,17 +24,11 @@ function generatePassword() {
     let lowerCases = confirm("Does your password require lowercase characters?");
     let numsNums = confirm("Does your password require numbers?");
     let specialChars = confirm("Does your password require special characters?");
-    // let i = 0; i < prompts; i++
-    for(let i in prompts) {
-      if(upperCases) {
-        pass += upper[Math.floor(Math.random() * upper.length)];
-      } if(lowerCases) {
-        pass += lower[Math.floor(Math.random() * lower.length)];
-      } if(numsNums) {
-        pass += nums[Math.floor(Math.random() * nums.length)];
-      } if(specialChars) {
-        pass += specialChar[Math.floor(Math.random() * specialChar.length)];
-      }
+    
+    for(let i = 0; i < prompts; i++) {
+      if(charSet) {
+        pass += charSet[Math.floor(Math.random() * charSet.length)];
+      } 
     } 
     return pass;
   }
