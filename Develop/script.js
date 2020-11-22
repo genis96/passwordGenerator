@@ -17,10 +17,10 @@ generatePassword = () => {
 
   if(prompts >= 8 && prompts <= 128) {
     let promptPopups = 
-      confirm('Does your password require uppercase characters?');
-      confirm('Does your password require lowercase characters?');
-      confirm('Does your password require numbers?');
-      confirm('Does your password require special characters?');
+      confirm('Your password requires uppercase characters');
+      confirm('Your password requires lowercase characters');
+      confirm('Yourpassword requires numbers');
+      confirm('Yourpassword requires special characters');
 
     for(let i = 0; i < prompts; i++) {
       if(charSet) {
