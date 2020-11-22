@@ -12,6 +12,7 @@ function writePassword() {
 function generatePassword() {
   let pass = '';
   let charSet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=';
+  //removing Number works as well
   let prompts = Number(prompt('Required: 8-128', '0'));
 
   if(prompts >= 8 && prompts <= 128) {
